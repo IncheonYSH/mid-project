@@ -31,6 +31,12 @@
 
    <br>
 
+![작업구역](README/구성1.PNG)
+
+<br>  
+
+
+
 **2. 로그인 페이지**
 
    * https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com 를 참고한다.
