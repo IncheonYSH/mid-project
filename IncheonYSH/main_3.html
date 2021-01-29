@@ -6,161 +6,198 @@
     <title>Article</title>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/container_article.css">
     <script type = "text/javascript">
-        
-
     </script>
-    <style type="text/css">
-        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-        #container_article .blind{
-            display: none
-        }
-
-        #container_article .contents{
-            padding: 0px 6px 0px 6px;
-            font-family: 'Nanum Gothic'
-        }
-        #container_article .contents .content_post {
-            padding: 30px 0px 30px 0px;
-            border-bottom-width: 1px;
-            border-bottom-style: solid;
-            border-bottom-color:rgb(193, 193, 193);
-            width: device-width;
-        }
-        #container_article .contents .content_post .content_post_inner{
-            margin: 0px 0px 0px 0px;
-        }        
-        #container_article .contents .content_post .content_post_inner .title{
-            font-size: 18pt;
-            line-height: 1.4;
-            font-weight: normal;
-            color:#525252;
-
-            cursor: pointer;
-        }
-        #container_article .contents .content_post .content_post_inner .title:hover{       
-            color:black;
-        }
-        #container_article .contents .content_post .content_post_inner .thumnail_summary{
-            margin: 15px 0px 15px 0px;
-            height: 70px;
-            display: flex;            
-        }
-        #container_article .contents .content_post .content_post_inner .thumnail_summary .article_summary{
-            float: right;
-            font-size: 10pt;
-            color:#6e6e6e;
-            width: auto;
-            height: 70px;
-            overflow: hidden;
-            text-overflow: "";
-            
-            white-space:normal; /* 연속 공백 하나로 합치기 */
-            line-height: 1.5; /* 줄 높이 */
-            height: 4.5em;
-
-            cursor: pointer;     
-        }
-        #container_article .contents .content_post .content_post_inner .thumnail_summary .article_summary:hover{    
-            color:black;
-            font-weight: 500;        
-        }
-        #container_article .contents .content_post .content_post_inner .thumnail_summary .image_thumnail {
-            margin: 0px 15px 0px 0px;
-            float: left;
-            width: 100px;
-            height: 70px;
-
-            cursor: pointer;
-        }   
-        #container_article .contents .content_post .content_post_inner .thumnail_summary .image_thumnail .thumnail{
-            object-fit: cover;
-            width: 100px;
-            height: 70px;
-        }
-        #container_article .contents .content_post .content_post_inner .doc_info {
-            font-size:11px;
-            color:rgb(193, 193, 193);
-        }
-        #container_article .contents .content_post .content_post_inner .doc_info .icon{
-            margin: 0px 3px 0px 0px;
-            color:rgb(193, 193, 193);
-            font-size:11px
-        }        
-        #container_article .contents .content_post .content_post_inner .doc_info .doc_info_split {
-            margin: 0px 15px 0px 15px;
-            color:rgb(230, 230, 230)
-        }
-    </style>
-
 </head>
 <body font-family='Nanum Gothic'>
-    <div id="container_article">
+    <div id = "body_main">
+        <!-- article_list -->
+        <div id="container_article">
+            <!-- single_article -->
+            <div class = "contents">
+                <div class = "content_post">
+                    <div class = "content_post_inner">
+                        <div class = "title" onclick = "location.href='article/1.html'">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.                       
+                        </div>                    
+                        <div class = "image_thumnail" onclick = "location.href='article/1.html'">
+                            <img class = "thumnail" src = "thumnail_image/cat.jpg">
+                        </div>
+                        <div class = "article_summary" onclick = "location.href='article/1.html'">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </div>                    
+                        <div class="doc_info">
+                            <span class = "icon">
+                                <i class = "far fa-clock fa-xs">
+                                </i>
+                            </span>
+                            <span class = "upload_date">2021.01.21</span>                    
+                            <span class = "doc_info_split">|</span>
+                            <span class = "icon">
+                                <i class = "far fa-eye xs">
+                                </i>
+                            </span>
+                            <span class = "view_count"></span>2321</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <!-- single_article -->
+            <div class = "contents">
+                <div class = "content_post">
+                    <div class = "content_post_inner">
+                        <div class = "title" onclick = "location.href='article/1.html'">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.                       
+                        </div>                    
+                        <div class = "image_thumnail" onclick = "location.href='article/1.html'">
+                            <img class = "thumnail" src = "thumnail_image/cat.jpg">
+                        </div>
+                        <div class = "article_summary" onclick = "location.href='article/1.html'">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </div>                    
+                        <div class="doc_info">
+                            <span class = "icon">
+                                <i class = "far fa-clock fa-xs">
+                                </i>
+                            </span>
+                            <span class = "upload_date">2021.01.21</span>                    
+                            <span class = "doc_info_split">|</span>
+                            <span class = "icon">
+                                <i class = "far fa-eye xs">
+                                </i>
+                            </span>
+                            <span class = "view_count"></span>2321</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <!-- single_article -->
+            <div class = "contents">
+                <div class = "content_post">
+                    <div class = "content_post_inner">
+                        <div class = "title" onclick = "location.href='article/1.html'">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.                       
+                        </div>                    
+                        <div class = "image_thumnail" onclick = "location.href='article/1.html'">
+                            <img class = "thumnail" src = "thumnail_image/cat.jpg">
+                        </div>
+                        <div class = "article_summary" onclick = "location.href='article/1.html'">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </div>                    
+                        <div class="doc_info">
+                            <span class = "icon">
+                                <i class = "far fa-clock fa-xs">
+                                </i>
+                            </span>
+                            <span class = "upload_date">2021.01.21</span>                    
+                            <span class = "doc_info_split">|</span>
+                            <span class = "icon">
+                                <i class = "far fa-eye xs">
+                                </i>
+                            </span>
+                            <span class = "view_count"></span>2321</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <!-- single_article -->
+            <div class = "contents">
+                <div class = "content_post">
+                    <div class = "content_post_inner">
+                        <div class = "title" onclick = "location.href='article/1.html'">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.                       
+                        </div>                    
+                        <div class = "image_thumnail" onclick = "location.href='article/1.html'">
+                            <img class = "thumnail" src = "thumnail_image/cat.jpg">
+                        </div>
+                        <div class = "article_summary" onclick = "location.href='article/1.html'">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </div>                    
+                        <div class="doc_info">
+                            <span class = "icon">
+                                <i class = "far fa-clock fa-xs">
+                                </i>
+                            </span>
+                            <span class = "upload_date">2021.01.21</span>                    
+                            <span class = "doc_info_split">|</span>
+                            <span class = "icon">
+                                <i class = "far fa-eye xs">
+                                </i>
+                            </span>
+                            <span class = "view_count"></span>2321</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+        </div>
+        <!---->
 
-        <!-- Single Article -->
-        <div class = "contents">
-            <div class = "content_post">
-                <div class = "content_post_inner">
-                    <div class = "title" onclick = "location.href='article/1.html'">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.                       
-                    </div>
-                    <div class = "thumnail_summary">
-                        <div class = "image_thumnail" onclick = "location.href='article/1.html'">
-                            <img class = "thumnail" src = "thumnail_image/cat.jpg">
-                        </div>
-                        <div class = "article_summary" onclick = "location.href='article/1.html'">
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </div>
-                    </div>
-                    <div class="doc_info">
-                        <span class = "icon">
-                            <i class = "far fa-clock fa-xs">
-                            </i>
-                        </span>
-                        <span class = "upload_date">2021.01.21</span>                    
-                        <span class = "doc_info_split">|</span>
-                        <span class = "icon">
-                            <i class = "far fa-eye xs">
-                            </i>
-                        </span>
-                        <span class = "view_count"></span>2321</span>
-                    </div>
+        <!-- page_number -->
+        <div id = "page">
+            <span class = "page_num">1</span>
+            <span class = "page_num">2</span>
+            <span class = "page_num">3</span>
+            <span class = "page_num">4</span>
+            <span class = "page_num">5</span>
+            <span class = "page_num">➔</span>
+        </div>
+        <!---->
+        <!-- side_bar -->
+        <div id = "side_bar">
+            <!-- top_5 -->
+            <div id = "top_5">
+                <div class="top_5_main">
+                    TOP 5
+                </div>
+                <div class = "top_5_list">
+                    <span class = "top_5_order">1</span>
+                    <span class = "top_5_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </span>
+                </div>
+                <div class = "top_5_list">
+                    <span class = "top_5_order">2</span>
+                    <span class = "top_5_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </span>
+                </div>
+                <div class = "top_5_list">
+                    <span class = "top_5_order">3</span>
+                    <span class = "top_5_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </span>
+                </div>
+                <div class = "top_5_list">
+                    <span class = "top_5_order">4</span>
+                    <span class = "top_5_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </span>
+                </div>
+                <div class = "top_5_list">
+                    <span class = "top_5_order">5</span>
+                    <span class = "top_5_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </span>
+                </div>
+
+            </div>
+            <!---->
+            <!-- top_keywords-->
+            <div id = "top_keywords">
+                <div class = "top_keywords_main">
+                    TOP KEYWORDS
+                </div>
+                <div class = "top_keywords_list">
+                    <div class = "top_keywordskeywords">고양이</div>
+                    <div class = "top_keywordskeywords">야옹</div>
+                    <div class = "top_keywordskeywords">애옹</div>
+                    <div class = "top_keywordskeywords">애오옹</div>
+                    <div class = "top_keywordskeywords">야오옹</div>
                 </div>
             </div>
+            <!---->
         </div>
-        <!-- /Single Article -->
-        <!-- Single Article -->
-        <div class = "contents">
-            <div class = "content_post">
-                <div class = "content_post_inner">
-                    <div class = "title" onclick = "location.href='article/1.html'">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.                       
-                    </div>
-                    <div class = "thumnail_summary">
-                        <div class = "image_thumnail" onclick = "location.href='article/1.html'">
-                            <img class = "thumnail" src = "thumnail_image/cat.jpg">
-                        </div>
-                        <div class = "article_summary" onclick = "location.href='article/1.html'">
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </div>
-                    </div>
-                    <div class="doc_info">
-                        <span class = "icon">
-                            <i class = "far fa-clock fa-xs">
-                            </i>
-                        </span>
-                        <span class = "upload_date">2021.01.21</span>                    
-                        <span class = "doc_info_split">|</span>
-                        <span class = "icon">
-                            <i class = "far fa-eye xs">
-                            </i>
-                        </span>
-                        <span class = "view_count"></span>2321</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /Single Article -->
+        <!---->
 
     </div>
 </body>
