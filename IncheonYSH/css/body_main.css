@@ -1,11 +1,15 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-/* #container_article */
+/* body_main */
 #body_main{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     grid-gap: 30px;
+
+    padding: 0px 0px 0px 0px;
 }
+
+/* container_article */
 #body_main #container_article{
     grid-column: 1;
     grid-row: 1;
@@ -245,7 +249,7 @@
     #body_main #container_article .contents .content_post .content_post_inner .title{
         grid-column: 1;
         grid-row: 1;
-        font-size: 20pt;
+        font-size: 19pt;
     }
     #body_main #container_article .contents .content_post .content_post_inner .article_summary{
         grid-column: 1;
@@ -279,5 +283,11 @@
         overflow: hidden;
         text-overflow: ellipsis;
         width: 280px;
+    }
+}
+/* width >= 1080 */
+@media (min-width: 1080px){
+    #body_main{
+        width: 1080px;
     }
 }
