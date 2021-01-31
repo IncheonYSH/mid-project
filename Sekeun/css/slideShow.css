@@ -1,0 +1,53 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+#slideShow {
+    background-color:#ffffff;
+    height:440px;
+    line-height:440px;
+    position:absolute;
+    top:66px;
+    border-bottom:solid #CCC 1px;
+}
+
+#slideShowBox{
+    width:1440px;
+    height:440px;
+    text-align:center;
+    overflow:hidden;
+}
+
+/* 슬라이드 패널  숨겨진 이미지까지 이미지 전체를 담는 영역*/
+#slidePanel {
+    position:relative;
+    width:5760px;
+    height:440px;
+}
+
+/* 슬라이드 이미지 */
+.slideImage {
+    float:left;
+    width:1440px;
+    height:440px;
+}
+
+/* prev/next 버튼 */
+#prevNextButtonBox{position:relative;z-index:10;}
+#prevButton {position:absolute;top:160px;left:4%;opacity:0.6;cursor:pointer;}
+#nextButton {position:absolute;top:160px;right:4%;opacity:0.6;cursor:pointer;}
+
+#prevButton:hover {opacity:1;}
+#nextButton:hover {opacity:1;}
+
+/*컨트롤 버튼*/
+#controlPanel {position:absolute;top:360px;left:50%;transform:translateX(-50%); margin:0 auto; width:100px}
+#controlPanel img{float:left;margin:5px}
+
+
+
+
+
+
+
+
+
+
