@@ -60,9 +60,11 @@ hr, legend{
 }
 
 .headerBox .headerLimit .inner_header .searchBar {
+    position: relative;
     top: 15px;
     right: 0;
     width: 293px;
+    text-align: right;
 }
 
 .headerBox .headerLimit .inner_header .searchBar input {
@@ -71,25 +73,28 @@ hr, legend{
     padding: 0 10px;
     width: 208px;
     height: 34px;
+    _line_height: 20px;
     color: #6e6e70;
+    -webkit-appearance: none;
+    vertical-align: top;
+    transition: all 0.3s ease;
 }
 
 .headerBox .headerLimit .inner_header .searchBar .search_area {
 }
 
 .headerBox .headerLimit .inner_header .searchBar .btn_search {
-  width: 43px;
-  height: 40px;
-  border: 0;
-  border-left: 1px solid #E7E7E7;
-  border-radius: 0;
-  margin-left: 16px;
-  cursor: pointer;
-  font-family: xeicon;
-  background: #fff;
-  color: #a5a5a5;
-  font-size: 21px;
-  letter-spacing: -2px;
+    width: 43px;
+    height: 40px;
+    border: 0;
+    border-left: 1px solid #E7E7E7;
+    margin-left: 16px;
+    cursor: pointer;
+    font-family: xeicon;
+    background: #fff;
+    color: #a5a5a5;
+    text-align: center;
+    vertical-align: top;
 }
 
 
