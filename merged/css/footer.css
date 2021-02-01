@@ -8,7 +8,7 @@
     text-align: center;
     background-color: #f9f9f9;
 }
-    
+
 
 #wrap #footer .big_footer{
     position: relative;
@@ -90,5 +90,21 @@
     font-size: 9px;
     word-spacing: 2px;
     line-height: 10px;
+}
 
+.footer_down .btn_go_top.bottom{
+    bottom: 180px !important;
+    opacity: 1;
+    position: absolute;
+    !important: ;
+}
+
+.footer_down .btn_go_top{
+    display: block;
+    position: fixed;
+    height: 24px;
+    font-size: 24px;
+    color: #a5a5a5;
+    text-decoration: none;
+    opacity: 0.7;
 }
