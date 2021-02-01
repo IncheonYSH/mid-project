@@ -10,7 +10,7 @@ $(function(){
         //전달받은 index 값을 movedIndex에 저장
         movedIndex = index; //전역변수
         //슬라이드 이동
-        var moveLeft = -(index * 1440);
+        var moveLeft = -(index * $(window).width());
         $('#slidePanel').animate({'left':moveLeft},'slow');
     };
 

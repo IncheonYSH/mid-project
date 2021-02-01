@@ -2,52 +2,44 @@
 
 #slideShow {
     background-color:#ffffff;
+    position:relative;
     height:440px;
-    line-height:440px;
-    position:absolute;
-    top:66px;
+    width:calc(100%);
+    margin: 0 auto;
     border-bottom:solid #CCC 1px;
 }
 
 #slideShowBox{
-    width:1440px;
     height:440px;
+    width:calc(100%);
     text-align:center;
     overflow:hidden;
+    margin:0 auto;
 }
 
 /* 슬라이드 패널  숨겨진 이미지까지 이미지 전체를 담는 영역*/
 #slidePanel {
     position:relative;
-    width:5760px;
-    height:440px;
+    width:calc(100% * 4);
+    height:100%;
 }
 
 /* 슬라이드 이미지 */
 .slideImage {
+    object-fit: none;
     float:left;
-    width:1440px;
+    width:calc(100% / 4);
     height:440px;
 }
 
 /* prev/next 버튼 */
 #prevNextButtonBox{position:relative;z-index:10;}
-#prevButton {position:absolute;top:160px;left:4%;opacity:0.6;cursor:pointer;}
-#nextButton {position:absolute;top:160px;right:4%;opacity:0.6;cursor:pointer;}
+#prevButton {position:absolute;top:185px;left:1%;opacity:0.6;cursor:pointer;}
+#nextButton {position:absolute;top:185px;right:1%;opacity:0.6;cursor:pointer;}
 
 #prevButton:hover {opacity:1;}
 #nextButton:hover {opacity:1;}
 
 /*컨트롤 버튼*/
-#controlPanel {position:absolute;top:360px;left:50%;transform:translateX(-50%); margin:0 auto; width:100px}
+#controlPanel {position:absolute;top:400px;left:50%;transform:translateX(-50%); margin:0 auto; width:100px}
 #controlPanel img{float:left;margin:5px}
-
-
-
-
-
-
-
-
-
-
