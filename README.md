@@ -20,6 +20,21 @@
 
 
 
+* ### 완료된 작업
+
+  * 메인페이지
+
+    |                | 진행 | 비고                                          | 담당자                                                       |
+    | -------------- | ---- | --------------------------------------------- | ------------------------------------------------------------ |
+    | Header, footer | 완료 | 반응형 적용 예정                              | [이동구](https://github.com/LeeDongu)                        |
+    | Slide          | 완료 | 디스플레이 에러 수정 예정<br>반응형 적용 예정 | [오세근](https://github.com/Sekeun)                          |
+    | Main           | 완료 |                                               | [윤성환](https://github.com/IncheonYSH/mid-project)          |
+    | Merge          | 완료 |                                               | [이동구](https://github.com/LeeDongu), [오세근](https://github.com/Sekeun), [윤성환](https://github.com/IncheonYSH/mid-project) |
+
+    <br>
+
+    
+
 # !TODO
 
 **1. 메인페이지 클론코딩**
