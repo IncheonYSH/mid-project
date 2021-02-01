@@ -1,23 +1,22 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 
-#footer {
+#wrap #footer {
     clear: both;
     width: 100%;
     margin: 0 auto;
     text-align: center;
     background-color: #f9f9f9;
-    position: absolute;
-    bottom: 0;
 }
+    
 
-#footer .big_footer{
+#wrap #footer .big_footer{
     position: relative;
     width: 100%;
     margin: 0 auto;
 }
 
-.big_footer .footer_up{
+#wrap #footer .big_footer .footer_up{
     position: relative;
 
 }
