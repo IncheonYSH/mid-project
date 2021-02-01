@@ -307,6 +307,23 @@
 #body_main #side_bar #subscribe #subscribe_container .submit_button input[type="submit"]:hover{
     background-color: rgb(120, 120, 120);
 }
+#body_main #side_bar #subscribe #subscribe_container .invalid{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    justify-self: center;
+    color: red;
+    font-size: 12px;
+    margin: 10px 0px 0px 0px;
+}
+#body_main #side_bar #subscribe #subscribe_container .valid{
+    grid-column: 1 / span 2;
+    grid-row: 2;    
+    justify-self: center;
+    color: green;
+    font-size: 12px;
+    margin: 10px 0px 0px 0px;
+}
+
 
 
 /* width >= 768 */
