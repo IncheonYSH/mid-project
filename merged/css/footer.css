@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+#wrap #footer {
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+    
+
+#wrap #footer .big_footer{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#wrap #footer .big_footer .footer_up{
+    position: relative;
+
+}
+
+.footer_up .other_site{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 43px 0;
+    text-align: left;
+}
+
+.footer_up .other_site li{
+    display: inline-block;
+    margin-right: 50px;
+    vertical-align: middle;
+}
+
+.footer_up .other_site li:first-child{
+    margin-left: 50px;
+}
+
+.footer_up .sns_share{
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.footer_up .sns_share ul{
+    position: absolute;
+    bottom: 49px;
+    right: 39px;
+}
+
+.footer_up .sns_share li.email{
+    width: 23px;
+}
+
+.footer_up .sns_share li:first-child{
+    margin-left: 0;
+}
+.footer_up .sns_share li{
+  overflow: hidden;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+}
+
+.footer_up .sns_share a{
+  font-size: 23px;
+}
+
+.footer_up .sns_share li a{
+    display: block;
+    height: 20px;
+    color: #a5a5a5;
+}
+
+.footer_down{
+    border-top: 1px solid #efefef;
+    position: relative;
+}
+
+.footer_down .copyright{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 19px 0;
+    color: #323232;
+    text-align: center;
+    font-family: tahoma,Helvetica,sans-serif;
+    font-size: 9px;
+    word-spacing: 2px;
+    line-height: 10px;
+
+}
