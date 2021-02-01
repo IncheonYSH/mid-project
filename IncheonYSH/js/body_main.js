@@ -3,7 +3,7 @@ var subscribe_check = document.getElementById("subscribe_container");
 
 subscribe.addEventListener("click", function(){
     var email_address = document.getElementById("email_input").value;
-    var formulaRegex = /[0-9a-zA-Z.-_]+@[0-9a-zA-Z.-_]+\.[a-zA-Z]{2,3}/;
+    var formulaRegex = /^[0-9a-zA-Z.-_]+@[0-9a-zA-Z.-_]+\.[a-zA-Z]{2,3}$/i;
     var email_match = formulaRegex.test(email_address);
     var subscribe_alert = "이메일 주소를 확인해 주세요!";
     if (email_match == true) {
