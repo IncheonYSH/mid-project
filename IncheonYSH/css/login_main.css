@@ -1,0 +1,149 @@
+#container_body{
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+#logo_main{
+    padding: 80px 0px 45px 0px;
+}
+#logo_main #logo_login{
+    object-fit: scale-down;
+    width: 231px;
+    height: 44px;
+}
+#login_container{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#login{
+    max-width: 460px;
+}
+
+#login .login_input{
+    width: auto;  
+}
+#login .login_input input[type="text"]{
+    padding: 12px;
+    width: 434px;
+    font-size: 14px;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: rgb(190,190,190);
+    border-style: solid;
+    margin: 5px 0px;
+}
+#login .login_input input[type="text"]:focus{
+    border-color: rgb(24, 199, 39);
+    border-radius: 0px;
+    border-width: 1px;
+    outline: none;
+}
+#login .login_input input[type="password"]{
+    padding: 12px;
+    width: calc(100% - 26px);
+    font-size: 14px;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: rgb(190,190,190);
+    border-style: solid;
+    margin: 5px 0px;
+}
+#login .login_input input[type="password"]:focus{
+    border-color: rgb(24, 199, 39);
+    border-radius: 0px;
+    border-width: 1px;
+    outline: none;
+}
+#login #login_request_button{
+    max-width: 460px;
+    min-width: 0;
+}
+#login #login_request_button input[type="submit"]{
+    width: 100%;
+    margin: 5px 0px;
+    padding: 12px;
+    border-radius: 0px;
+    border: none;
+    background-color: rgb(24, 199, 39);
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+}
+#sign_up{
+    color: rgb(235,235,235);  
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 10px 10px;
+}
+#sign_up a:link{
+    color: rgb(170,170,170);     
+    font-weight: 100;
+    text-decoration: none;
+}
+#sign_up a:visited{
+    color: rgb(130,130,130);    
+    font-weight: 100;
+    text-decoration: none;
+}
+#sign_up a:hover{
+    color: rgb(130,130,130);    
+    font-weight: 100;
+    text-decoration: none;
+}
+#sign_up a:active{
+    color: rgb(130,130,130);  
+    font-weight: 100;
+    text-decoration: none;
+}
+#terms_of_use{    
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 10px 10px;
+    vertical-align: bottom;
+    display: inline-block;
+}
+#terms_of_use a:link{    
+    font-weight: 100;
+    text-decoration: none;
+    color: black;
+}
+#terms_of_use a:visited{    
+    font-weight: 100;
+    text-decoration: none;
+    color: black;
+}
+#terms_of_use a:hover{    
+    font-weight: 100;
+    text-decoration: none;
+    color: black;
+}
+#terms_of_use a:active{    
+    font-weight: 100;
+    text-decoration: none;
+    color: black;
+}
+
+
+@media (max-width: 767px){
+    #logo_main #logo_login{
+        object-fit: scale-down;
+        width: 165px;
+        height: 32px;
+    }
+    #login .login_input input[type="text"]{
+        width: calc(100% - 26px);
+    }
+    #login_container{
+        display: relative;
+    }
+    #login{        
+        min-width: 100%;
+    }
+    #login #login_request_button{
+        max-width: 100%;
+    }
+}
