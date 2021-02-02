@@ -69,7 +69,7 @@
   | 함수/메서드 매개변수 | `lower_with_under`   |                                   |
   | 지역 변수            | `lower_with_under`   |                                   |
 
-
+<br>
 
 # !TODO
 
@@ -89,7 +89,7 @@
 
 **3. 커뮤니티 페이지**
 
-   * 미정
+   * https://okky.kr/ 참고
 
 ​     <br>
 
