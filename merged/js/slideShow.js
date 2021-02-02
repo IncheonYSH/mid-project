@@ -1,6 +1,8 @@
 /**
 * slideShow.js
 **/
+
+
 $(function(){
     //이동한 이미지의  index 값 저장(현재보고있는 이미지-현재위치)
     var movedIndex=0;
@@ -10,8 +12,10 @@ $(function(){
         //전달받은 index 값을 movedIndex에 저장
         movedIndex = index; //전역변수
         //슬라이드 이동
-        var moveLeft = -(index * $(window).width());
-        $('#slidePanel').animate({'left':moveLeft},'slow');
+        
+        var winwidth = $(window).width();        
+        var moveLeft = -(index * winwidth);
+        $('#slidePanel').animate({'left':moveLeft},'slow');        
     };
 
     //prev 버튼 클릭하면 앞으로 이동
@@ -52,6 +56,11 @@ $(function(){
         $(this).on('click',function(){
             moveSlide(index);
         }); //on 종료
-    });//each 함수 종료
-
+    });//each 함수 종료 
+       
+    $(window).on('resize', function(){
+        var left_position = -(movedIndex * $(window).width());
+        $('#slidePanel').css('position','absolute');
+        $('#slidePanel').css('left',left_position);
+    });
 });//$(function 종료

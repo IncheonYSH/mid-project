@@ -19,7 +19,7 @@
 
 /* 슬라이드 패널  숨겨진 이미지까지 이미지 전체를 담는 영역*/
 #slidePanel {
-    position:relative;
+    position: relative;
     width:calc(100% * 4);
     height:100%;
 }
