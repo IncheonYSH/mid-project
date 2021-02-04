@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/login_main.css' %}">
+</head>
+<body>
+    <div id = "container_body">
+        <div id = "logo_main">
+            <img id = "logo_login" src = "{% static 'image/logo_naver.png' %}">
+        </div>
+        <div id = "login_container">
+            <form id = "login" method = "POST" action = "{% url 'login' %}">
+                {% csrf_token %}
+                <div class = "login_input">
+                    <input id = "id" type = "text" name = "username" placeholder = "아이디" />
+                </div>
+                <div class = "login_input">
+                    <input id = "pw" type = "password" name = "password" placeholder = "비밀번호" />
+                </div>
+                <div id = "login_request_button">
+                    <input id = "login_request" type = "submit" value = "로그인">
+                </div>
+            </form>
+        </div>
+        <br>
+        <div id = "sign_up">
+            <span><a href ="#">아이디 찾기</a></span>
+            <span>|</span>
+            <span><a href ="#">비밀번호 찾기</a></span>
+            <span>|</span>
+            <span><a href = "#">회원가입</a></span>
+        </div>
+        <div id = "terms_of_use">
+            <span><a href ="#">이용약관</a></span>
+            <span>|</span>
+            <span><a href ="#"><b>개인정보처리방침</b></a></span>
+            <span>|</span>
+            <span><a href ="#">책임의 한계와 법적고지</a></span>
+        </div>
+        <div id = "copyrights">
+        </div>
+    </div>
+</body>
+</html>

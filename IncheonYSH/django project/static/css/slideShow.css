@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+#slideShow {
+    background-color:#ffffff;
+    position:relative;
+    height:440px;
+    width:calc(100%);
+    margin: 0 auto;
+    border-bottom:solid #CCC 1px;
+}
+
+#slideShowBox{
+    height:440px;
+    width:calc(100%);
+    text-align:center;
+    overflow:hidden;
+    margin:0 auto;
+}
+
+/* 슬라이드 패널  숨겨진 이미지까지 이미지 전체를 담는 영역*/
+#slidePanel {
+    position: relative;
+    width:calc(100% * 4);
+    height:100%;
+}
+
+/* 슬라이드 이미지 */
+.slideImage {
+    object-fit: none;
+    float:left;
+    width:calc(100% / 4);
+    height:440px;
+}
+
+/* prev/next 버튼 */
+#prevNextButtonBox{
+    position:relative;
+    z-index:10;
+}
+#prevButton {
+    position:absolute;
+    top:185px;
+    left: 0;
+    opacity:0.6;
+    cursor:pointer;
+    height: 70px;
+    width: 100px;
+}
+#nextButton {
+    position:absolute;
+    top:185px;
+    right: 0;
+    opacity:0.6;
+    cursor:pointer;
+    height: 70px;
+    width: 100px;
+}
+
+#prevButton:hover {
+    opacity:1;
+}
+#nextButton:hover {
+    opacity:1;
+}
+
+/*컨트롤 버튼*/
+#controlPanel {
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    margin:0 auto;
+    padding: 0px 0px 0px 6px;
+    width:100px;
+}
+#controlPanel img{
+    float:left;
+    margin:5px;
+}
+
+/* width <= 767 */
+@media (max-width: 767px){
+    #slideShow{
+        height: 280px;
+    }
+    #slideShowBox{
+        height: 280px;
+    }
+    .slideImage{
+        height: 280px;
+        object-fit: cover;
+    }
+    #controlPanel{
+        bottom:10px;
+        padding: 0px 0px 0px 36px;
+        width:100px;
+    }
+    #nextButton{
+        top: 130px;
+        width: 40px;
+        height: 20px;
+    }
+    #prevButton{
+        top: 130px;
+        width: 40px;
+        height: 20px;        
+    }
+    #controlPanel img{
+        width: 10px;
+        height: 10px;
+        margin: 3px;
+    }
+}
