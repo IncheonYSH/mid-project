@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+.headerBox{
+    position: fixed; /* 이 부분은 왜이럴까 */
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #d6d6d6;
+    z-index: 1000;
+}
+
+.headerLimit {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    font-family: Avenir,'Lato',"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔바른고딕",NanumBarunGothic,"나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
+}
+
+.inner_header {
+    position: relative;
+    max-width: 1180px;
+    height: 66px;
+    margin: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 3fr 1fr;
+}
+
+/************ About TopMenu *************/
+.topMenuBox {
+  margin-left: 20px;
+}
+
+.headerBox .headerLimit .inner_header .topMenuBox li {
+  float: left;
+  font-size: 16px;
+  text-align: left;
+  margin: 24px 30px 0 0;
+}
+
+.topMenuBox ul li a {
+    text-decoration:none; /*<a>태그 밑줄 없애기 */
+    color:grey;
+    font-size:14px;
+}
+
+.topMenuBox ul li a:hover{ /* 메인메뉴에 마우스 올렸을때*/
+    color:black;
+}
+
+/************** About seachBox / search button **************/
+img, fieldset {
+  border: 0;
+}
+
+hr, legend{
+    display: none;
+}
+
+.headerBox .headerLimit .inner_header .searchBar {
+    position: relative;
+    top: 15px;
+    right: 0;
+    width: 293px;
+    text-align: right;
+}
+
+.headerBox .headerLimit .inner_header .searchBar input {
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 208px;
+    height: 34px;
+    _line_height: 20px;
+    color: #6e6e70;
+    -webkit-appearance: none;
+    vertical-align: top;
+    transition: all 0.3s ease;
+}
+
+.headerBox .headerLimit .inner_header .searchBar .search_area {
+}
+
+.headerBox .headerLimit .inner_header .searchBar .btn_search {
+    width: 43px;
+    height: 40px;
+    border: 0;
+    border-left: 1px solid #E7E7E7;
+    margin-left: 16px;
+    cursor: pointer;
+    font-family: xeicon;
+    background: #fff;
+    color: #a5a5a5;
+    text-align: center;
+    vertical-align: top;
+}
+
+
+
+
+/*********************  Login *******************/
+
+
+.headerBox .headerLimit .inner_header .login li {
+  float: left;
+  font-size: 16px;
+  text-align: left;
+  margin: 20px 30px 0 0;
+}
+
+.login ul li a {
+    text-decoration:none; /*<a>태그 밑줄 없애기 */
+    color:grey;
+    font-size:14px;
+}
+
+.login ul li a:hover{ /* 메인메뉴에 마우스 올렸을때*/
+    color:black;
+}
+
+.login .user_name {
+    font-size:15px;
+}
+
+.login_box li {
+
+    padding-left: 10px;
+    padding-bottom : 10px;
+}
