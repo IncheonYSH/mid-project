@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign_up</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div id = "container_body">
+        <div id = "logo_main">
+            <img id = "logo_login" src = "image/logo_naver.png">        
+        </div>
+        <div id = "login_container">
+            <form id = "login" method = "POST">
+                <div class = "login_input">
+                    <div class = "input_label">*아이디</div>            
+                    <input id = "id" type = "text" name = "username"/>
+                </div>
+                <div class = "login_input">
+                    <div class = "input_label">*비밀번호</div>
+                    <input id = "pw1" type = "password" name = "password1"/>
+                </div>
+                <div class = "login_input">
+                    <div class = "input_label">*비밀번호 확인</div>
+                    <input id = "pw2" type = "password" name = "password2"/>
+                </div>
+                <div class = "login_input">
+                    <div class = "input_label">*이름</div>
+                    <input id = "name" type = "text" name = "last_name"/>
+                </div>
+                <div class = "login_input">
+                    <div class = "input_label">*생년월일</div>
+                    <input id = "yr" type = "text" name = "year" placeholder = "년(4자)" />
+                    <select id = "mt" name = "month">
+                        <option value="month">월</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <input id = "d" type = "text" name = "day" placeholder = "일" />
+                </div>
+                <div class = "login_input">
+                    <div class = "input_label">*성별</div>
+                    <select id = "sex" name = "sex">
+                        <option value="sex">성별</option>
+                        <option value="M">남자</option>
+                        <option value="F">여자</option>
+                    </select>
+                </div>
+                <div class = "login_input">
+                    <div class = "input_label">*본인 확인 이메일</div>
+                    <input id = "email" type = "email" name = "email"/>
+                </div>
+                
+                <div id = "login_request_button">        
+                    <input id = "login_request" type = "submit" value = "가입하기">
+                </div>
+            </form>
+        </div>
+        <br>
+        <div id = "terms_of_use">
+            <span><a href ="#">이용약관</a></span>
+            <span>|</span>
+            <span><a href ="#"><b>개인정보처리방침</b></a></span>
+            <span>|</span>
+            <span><a href ="#">책임의 한계와 법적고지</a></span>
+        </div>
+        <div id = "copyrights">        
+        </div>
+    </div>
+</body>
+</html>
