@@ -1,0 +1,17 @@
+{% extends "accounts/layout.html" %}
+
+{% block content %}
+<!-- 로그인 실패 화면이 들어올 영역 -->
+<div id="container">
+      <div id="login_container">
+          <div class="fail_message">
+              <h2> 로그인에 실패하셨습니다.</h2>
+              </br>
+              <p>아이디가 없다면 <br> 회원가입을 해주세요</p>
+              <div class="signup">
+                  아이디가 없으신가요?<a href="{%url 'accounts:signup' %}">회 원 가 입</a>
+              </div>
+          </div>
+      </div>
+</div>
+{% endblock %}

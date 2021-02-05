@@ -1,0 +1,21 @@
+{% extends "accounts/layout.html" %}
+
+{% block content %}
+<!-- 회원가입 화면이 들어올 영역 -->
+<div id="main_container">
+        <div class="form_container">
+            <div class="form">
+                <form action="#" method="post">
+                    {% csrf_token %} <!-- 폼데이터가 전송 될 때마다 임의의 문자열을 생성해 자체 인증 보안 강화 기술 -->
+                        {{form.as_p}} <!-- 폼과 연결된 필드의 값을 입력 할 수 있도록 html 코드를 자동으로 생성 -->
+                    <input type="submit" id="submit_btn" value="회원가입" class="submit_btn">
+                </form>
+            </div>
+            <div class="bottom_box">
+                <div class="no_id">
+                    <span><br>아이디가 있다면 </span><a href="{% url 'accounts:login' %}">로그인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
