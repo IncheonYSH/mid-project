@@ -13,7 +13,7 @@
             <img id = "logo_login" src = "{% static 'image/logo_naver.png' %}">
         </div>
         <div id = "login_container">
-            <form id = "login" method = "POST" action = "{% url 'accounts:signup' %}>
+            <form id = "login" method = "POST" action = "{% url 'accounts:signup' %}">
                 {% csrf_token %}
                 <div class = "login_input">
                     <div class = "input_label">*아이디</div>
@@ -35,16 +35,16 @@
                     <div class = "input_label">*생년월일</div>
                     <input id = "yr" type = "text" name = "year" placeholder = "년(4자)" />
                     <select id = "mt" name = "month">
-                        <option value="month">월</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
+                        <option value>월</option>
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option>
@@ -54,7 +54,7 @@
                 <div class = "login_input">
                     <div class = "input_label">*성별</div>
                     <select id = "sex" name = "sex">
-                        <option value="sex">성별</option>
+                        <option value>성별</option>
                         <option value="M">남자</option>
                         <option value="F">여자</option>
                     </select>
