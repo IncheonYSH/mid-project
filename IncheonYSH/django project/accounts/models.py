@@ -8,9 +8,8 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-
+    fullname = models.CharField('fullname', max_length=20)
     year = models.CharField('year', max_length=6)
-    day = models.CharField('day', max_length=6)
     month_select = (
         ("01", "1"),
         ("02", "2"),
@@ -26,6 +25,7 @@ class Profile(models.Model):
         ("12", "12")
     )
     month = models.CharField('month', max_length=6, choices=month_select)
+    day = models.CharField('day', max_length=6)
     sex_select = (
         ("M", "남자"),
         ("F", "여자")
@@ -33,7 +33,7 @@ class Profile(models.Model):
     sex = models.CharField('sex', max_length=6, choices=sex_select)
 
     def __str__(self):
-        return self.year
+        return self.fullname
 
 """
 @receiver(post_save, sender=User)
