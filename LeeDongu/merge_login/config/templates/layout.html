@@ -1,0 +1,52 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login_layout.css' %}">
+    <title></title>
+  </head>
+  <body>
+  {%load static%}
+    <div id="wrap">
+        <div id="header">
+            <div id="header_box">
+                <a href="#" class="header_img" id="log.naver"><img src="{% static 'image/d2_logo.png'%}"></a>
+            </div>
+        </div>
+        <!-- 각기 다른 content -->
+        {% block content %}
+        {% endblock %}
+
+        <div id="footer">
+              <ul>
+                  <li>
+                      <a target="_blank" href="http://www.naver.com/rules/service.html" id="fot.agreement">이용약관</a>
+                  </li>
+                  <li>
+                      <strong>
+                      <a target="_blank" href="http://www.naver.com/rules/privacy.html" id="fot.privacy">개인정보처리방침</a>
+                      </strong>
+                  </li>
+                  <li>
+                      <a target="_blank" href="http://www.naver.com/rules/disclaimer.html" id="fot.disclaimer">책임의 한계와 법적고지</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help">회원정보 고객센터</a>
+                  </li>
+              </ul>
+              <div class="copyright">
+                  <p>
+                      <span>Copyright</span>
+                      ©
+                      <a href="https://www.navercorp.com/" target="_blank">NAVER Corp.</a>
+                      <span>All Rights Reserved.</span>
+                  </p>
+              </div>
+        </div>
+    </div>
+
+  </body>
+</html>
