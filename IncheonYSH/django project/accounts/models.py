@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    fullname = models.CharField('fullname', max_length=20)
+    fullname = models.CharField('fullname', max_length=50)
     year = models.CharField('year', max_length=6)
     month_select = (
         ("01", "1"),

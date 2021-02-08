@@ -18,18 +18,38 @@
                 <div class = "login_input">
                     <div class = "input_label">*아이디</div>
                     <input id = "id" type = "text" name = "username"/>
+                    {% if form.username.errors %}
+                        {% for error in form.username.errors %}
+                            <div class = 'validation_error'>{{ error|escape }}</div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class = "login_input">
                     <div class = "input_label">*비밀번호</div>
                     <input id = "pw1" type = "password" name = "password1"/>
+                    {% if form.password1.errors %}
+                        {% for error in form.password1.errors %}
+                            <div class = 'validation_error'>{{ error|escape }}</div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class = "login_input">
                     <div class = "input_label">*비밀번호 확인</div>
                     <input id = "pw2" type = "password" name = "password2"/>
+                    {% if form.password2.errors %}
+                        {% for error in form.password2.errors %}
+                            <div class = 'validation_error'>{{ error|escape }}</div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class = "login_input">
                     <div class = "input_label">*이름</div>
                     <input id = "name" type = "text" name = "fullname"/>
+                    {% if form.fullname.errors %}
+                        {% for error in form.fullname.errors %}
+                            <div class = 'validation_error'>{{ error|escape }}</div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class = "login_input">
                     <div class = "input_label">*생년월일</div>
@@ -50,6 +70,11 @@
                         <option value="12">12</option>
                     </select>
                     <input id = "d" type = "text" name = "day" placeholder = "일" />
+                    {% if form.day.errors %}
+                        {% for error in form.day.errors %}
+                            <div class = 'validation_error'>{{ error|escape }}</div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class = "login_input">
                     <div class = "input_label">*성별</div>
@@ -58,10 +83,20 @@
                         <option value="M">남자</option>
                         <option value="F">여자</option>
                     </select>
+                    {% if form.sex.errors %}
+                        {% for error in form.sex.errors %}
+                            <div class = 'validation_error'>{{ error|escape }}</div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
                 <div class = "login_input">
                     <div class = "input_label">*본인 확인 이메일</div>
-                    <input id = "email" type = "email" name = "email"/>
+                    <input id = "email" type = "text" name = "email"/>
+                    {% if form.email.errors %}
+                        {% for error in form.email.errors %}
+                            <div class = 'validation_error'>{{ error|escape }}</div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
 
                 <div id = "login_request_button">

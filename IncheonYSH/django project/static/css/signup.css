@@ -61,6 +61,7 @@
     border-width: 1px;
     outline: none;
 }
+/*
 #login .login_input input[type="email"]{
     padding: 12px;
     width: calc(100% - 26px);
@@ -77,6 +78,7 @@
     border-width: 1px;
     outline: none;
 }
+*/
 #login #login_request_button{
     max-width: 460px;
     min-width: 0;
@@ -144,6 +146,13 @@
     border-radius: 0px;
     border-width: 1px;
     outline: none;
+}
+#login .login_input .validation_error{
+    color: red;
+    font-weight: 100;
+    text-align: left;
+    font-size: 13px;
+    margin: 5px 0px 25px 0px;
 }
 #login #login_request_button input[type="submit"]{
     width: 100%;
