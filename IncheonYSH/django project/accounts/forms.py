@@ -63,10 +63,10 @@ class SignupForm(UserCreationForm):
 
     def clean_username(self):
         username = self.cleaned_data.get('username')
-        alphabet_regex = re.compile(r'[^a-zA-Z]')
+        alphabet_regex = re.compile(r'[^a-zA-Z0-9]')
         user = get_user_model()
         if alphabet_regex.search(username):
-            raise forms.ValidationError('영문만 입력가능합니다')
+            raise forms.ValidationError('영문 및 숫자만 입력가능합니다')
         if user.objects.filter(username=username).exists():
             raise forms.ValidationError('사용중인 아이디입니다')
         return username
