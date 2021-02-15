@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% if article_objects %}
+        <div class = 'title'>{{article_objects.title}}</div>
+        <div class = 'article_number'>{{article_objects.article_number}}</div>
+        <div class = 'title_username'>{{article_objects.username}}</div>
+        <div class = 'title_time'>{{article_objects.time}}</div>
+        <div class = 'maintext'>{{article_objects.maintext}}</div>
+    {% else %}
+        <div class = 'deleted'>삭제된 게시글입니다</div>
+    {% endif %}
+</body>
+</html>
