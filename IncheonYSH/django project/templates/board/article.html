@@ -1,5 +1,6 @@
 {% load static %}
 {{ article_objects.update_counter }}
+{% load board_filter %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -115,7 +116,7 @@
                         <!---->
                     </div>
                 <div class = "main_text">
-                    {{ article_objects.maintext }}
+                    {{ article_objects.maintext|mark }}
                 </div>
                 <div class = "comment_box">
                     {% if comment_objects %}
