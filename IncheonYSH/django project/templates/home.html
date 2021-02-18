@@ -24,7 +24,7 @@
             <div class="headerBox">
                 <div class="headerLimit">
                     <div class="inner_header">
-                        <div class="logoBox"><a href="main.html"><img src="{% static 'image/d2.png' %}" id="logoImg"></a></div>
+                        <div class="logoBox"><a href="{% url 'home' %}"><img src="{% static 'image/d2.png' %}" id="logoImg"></a></div>
                         <div class="topMenuBox">
                             <div style="height : 0px; transition: all 0.5s ease 0s;">
                               <ul>
@@ -39,6 +39,9 @@
                                   </li>
                                   <li>
                                       <a href="#">About D2</a>
+                                  </li>
+                                  <li>
+                                      <a href="/board">Community</a>
                                   </li>
                               </ul>
                             </div>
@@ -80,10 +83,10 @@
                     </div>
                 </div>
                 <div id="controlPanel">
-                    <img src="{% static 'image/controlButton1.png' %}" class="controlButton">
-                    <img src="{% static 'image/controlButton1.png' %}" class="controlButton">
-                    <img src="{% static 'image/controlButton1.png' %}" class="controlButton">
-                    <img src="{% static 'image/controlButton1.png' %}" class="controlButton">
+                    <img src="{% static 'image/controlButton2.png' %}" class="controlButton">
+                    <img src="{% static 'image/controlButton2.png' %}" class="controlButton">
+                    <img src="{% static 'image/controlButton2.png' %}" class="controlButton">
+                    <img src="{% static 'image/controlButton2.png' %}" class="controlButton">
                 </div>
             </div>
         </div>

@@ -9,8 +9,14 @@ class Article(models.Model):
     title = models.CharField(max_length=30)
     maintext = models.TextField()
     time = models.DateTimeField(auto_now_add=True, auto_now=False)
+    viewcount = models.PositiveIntegerField(default=0)
     def __str__(self):
         return str(self.article_number)
+    @property
+    def update_counter(self):
+        self.viewcount = self.viewcount + 1
+        self.save()
+
 
 
 class Comment(models.Model):

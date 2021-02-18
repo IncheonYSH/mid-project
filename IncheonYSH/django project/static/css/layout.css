@@ -14,7 +14,7 @@
     padding-top: 66px;
 }
 
-#wrap #mainBox{
+#wrap #mainBox{   
     grid-column: 1;
     grid-row: 3;
     justify-self: center;

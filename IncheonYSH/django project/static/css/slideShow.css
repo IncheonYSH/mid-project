@@ -76,7 +76,12 @@
 #controlPanel img{
     float:left;
     margin:5px;
+    opacity:0.4;
 }
+#controlPanel img:hover{
+    opacity:1;
+}
+
 
 /* width <= 767 */
 @media (max-width: 767px){

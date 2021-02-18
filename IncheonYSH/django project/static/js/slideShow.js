@@ -45,10 +45,10 @@ $(function(){
     $('.controlButton').each(function(index){
         $(this).hover(
             function(){ //마우스 올렸을때 이미지 변경
-                $(this).attr('src','image/controlButton2.png');
+                $(this).attr('src','/static/image/controlButton2.png');
             },
             function() { //마우스를 뗐을때 이미지 변경
-                $(this).attr('src','image/controlButton1.png');
+                $(this).attr('src','/static/image/controlButton2.png');
             }
         );
 

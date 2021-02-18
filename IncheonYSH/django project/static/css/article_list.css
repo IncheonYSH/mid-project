@@ -1,0 +1,176 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* body_main */
+#wrap #mainBox #body_main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-gap: 30px;
+
+    margin: 15px 20px 100px 20px;
+    width: calc(1080px - 70px);    
+    justify-self: center;
+}
+
+/* container_article */
+#wrap #mainBox #body_main #container_article{
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    width:auto;
+}
+
+#wrap #mainBox #body_main #container_article .contents{
+    padding: 0;
+    font-family: 'Nanum Gothic';
+    width: auto;
+}
+#wrap #mainBox #body_main #container_article .contents .content_post{
+    padding: 10px 0px 10px 0px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:rgb(235, 235, 235);
+
+    min-width: calc(1080px - 70px);
+}
+#wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1em;
+    grid-gap: 5px;
+}        
+#wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner .title{
+    grid-column: 1;
+    grid-row: 1;
+
+    font-size: 19pt;
+    line-height: 1.4;
+    font-weight: normal;
+    color:#525252;
+
+    cursor: pointer;
+    width: auto;
+
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+#wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner .title:hover{       
+    color:black;
+}
+#wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner .doc_info{
+    grid-column: 1;
+    grid-row: 2;
+
+    font-size:11px;
+    color:rgb(193, 193, 193);
+}
+#wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner .doc_info .icon{
+    margin: 0px 3px 0px 0px;
+    color:rgb(193, 193, 193);
+    font-size:11px;
+}        
+#wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner .doc_info .doc_info_split{
+    margin: 0px 15px 0px 15px;
+    color:rgb(230, 230, 230);
+}
+
+/* page */
+#wrap #mainBox #body_main #page{
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+    width: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+#wrap #mainBox #body_main #page .page_num{
+    margin: 0px 1px 0px 1px;
+    width: 2.4em;
+    height: 2.4em;    
+    border-radius: 50%;
+    border:1.5px solid rgb(170, 170, 170);
+    text-align: center;
+    line-height: 2.4em;
+
+    font-size: 11px;
+    font-family: 'Nanum Gothic';
+    color: rgb(170, 170, 170);
+    cursor: pointer;
+}
+#wrap #mainBox #body_main #page .page_num:hover{
+    color: white;
+    background-color: rgb(170, 170, 170);
+}
+#wrap #mainBox #body_main #page .page_num_active{
+    margin: 0px 1px 0px 1px;
+    width: 2.4em;
+    height: 2.4em;    
+    border-radius: 50%;
+    border:1.5px solid rgb(170, 170, 170);
+    text-align: center;
+    line-height: 2.4em;
+
+    font-size: 11px;
+    font-family: 'Nanum Gothic';
+    color: white;
+    background-color: rgb(170, 170, 170);
+    cursor: pointer;
+}
+
+/* width <= 1079 */
+@media (max-width: 1079px){
+    #wrap #mainBox #body_main{
+        width: auto;
+        min-width: 0;
+    }
+    #wrap #mainBox #body_main #container_article{
+        justify-self: center;
+        width: auto;
+    }
+    #wrap #mainBox #body_main #container_article .contents .content_post{
+        width: calc(100vw - 40px);
+        min-width: 0;
+    }
+    #wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner .title{
+        min-width: 0;
+        width: auto;
+    }
+}
+
+
+/* width <= 767 */
+@media (max-width: 767px){
+    /* body_main */
+    #wrap #mainBox #body_main{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-gap: 30px;
+    
+        margin: 15px 7px 30px 7px;
+    }
+    #wrap #mainBox #body_main #container_article{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #wrap #mainBox #body_main #page{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* container_article */
+    #wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1em;
+        grid-gap: 15px;
+    }
+    #wrap #mainBox #body_main #container_article .contents .content_post .content_post_inner .title{
+        grid-column: 1;
+        grid-row: 1;    
+        font-size: 18pt;
+    }
+}
