@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+#wrap #slideBox{
+    display: flex;
+    align-items: center;    
+    height: 150px;
+    background-color: #154872;
+    color: white;
+    margin-top: 51px;
+}
+#wrap #slideBox .banner{    
+    text-align: center;    
+    width: 100vw;
+    font-size: 23px;
+}
+#wrap #slideBox .banner .banner_split{
+    font-weight: 100;
+}
+#wrap #slideBox .banner .banner_meta{
+    font-weight: 100;
+}
+
+/* width <= 767 */
+@media (max-width: 767px){
+    #wrap #slideBox{
+        height: 99px;
+    }
+    #wrap #slideBox .banner .banner_split{
+        display: none;
+    }
+    #wrap #slideBox .banner .banner_meta{
+        display: none;
+    }
+}

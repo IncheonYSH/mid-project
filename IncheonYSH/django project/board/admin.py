@@ -6,5 +6,9 @@ from django.db import models
 class ArticleAdmin(admin.ModelAdmin):
     readonly_fields = ('time',)
 
+
+class CommentAdmin(admin.ModelAdmin):
+    readonly_fields = ('time',)
+
 admin.site.register(Article,ArticleAdmin)
-admin.site.register(Comment)
+admin.site.register(Comment,CommentAdmin)

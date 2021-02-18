@@ -25,6 +25,6 @@ class Comment(models.Model):
     commentcomment_number = models.IntegerField(blank=True, null=True)
     username = models.ForeignKey(User, on_delete=models.DO_NOTHING, db_column='username')
     comment = models.CharField(max_length=500)
-    time = models.DateTimeField()
+    time = models.DateTimeField(auto_now_add=True, auto_now=False)
     def __str__(self):
         return str(self.comment_number)

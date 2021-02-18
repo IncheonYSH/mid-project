@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/community_layout.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/article_list.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/slideShow.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/community_banner_main.css' %}">
     <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
 <!--    <script src ="{% static 'js/body_main.js' %}" defer></script> -->
     <script src="{% static 'js/slideShow.js' %}"></script>
@@ -69,25 +69,10 @@
             </div>
         </div>
         <div id="slideBox">
-            <div id="slideShow"> <!--슬라이드 쇼-->
-                <div id="prevNextButtonBox">
-                    <img id="prevButton" src="{% static 'image/prevButton.png' %}">
-                    <img id="nextButton" src="{% static 'image/nextButton.png' %}">
-                </div>
-                <div id="slideShowBox">
-                    <div id="slidePanel">
-                        <a href="https://deview.kr/2020"><img src="{% static 'image/slide01.png' %}" class="slideImage"></a>
-                        <img src="{% static 'image/slide02.png' %}" class="slideImage">
-                        <a href="https://naver.github.io/"><img src="{% static 'image/slide03.png' %}" class="slideImage"></a>
-                        <a href="https://developers.naver.com/main/"><img src="{% static 'image/slide04.png' %}" class="slideImage"></a>
-                    </div>
-                </div>
-                <div id="controlPanel">
-                    <img src="{% static 'image/controlButton2.png' %}" class="controlButton">
-                    <img src="{% static 'image/controlButton2.png' %}" class="controlButton">
-                    <img src="{% static 'image/controlButton2.png' %}" class="controlButton">
-                    <img src="{% static 'image/controlButton2.png' %}" class="controlButton">
-                </div>
+            <div class = "banner">
+                <span class = "banner_title">Community</span>
+                <span class = "banner_split">|</span>
+                <span class = "banner_meta">정보 공유 및 소통을 위한 커뮤니티입니다.</span>
             </div>
         </div>
         <div id="mainBox">
@@ -128,6 +113,9 @@
                     {% endif %}
                 </div>
                 <!---->
+                <span id = "write_button" onclick = "location.href='{% url 'board:write' %}'">
+                    글쓰기
+                </span>
                 <!-- page_number -->
                 <div id = "page">
                     {% if article_list.has_previous %}

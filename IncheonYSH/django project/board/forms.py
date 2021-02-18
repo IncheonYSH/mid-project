@@ -5,16 +5,15 @@ from .models import Article
 from .models import Comment
 
 class WriteArticleForm(forms.ModelForm):
-    title = forms.CharField(max_length=30, widget=forms.TextInput)
+    title = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'placeholder': '제목을 입력하세요'}))
     maintext = forms.CharField(widget=forms.Textarea)
 
     class Meta:
         model = Article
         fields = ['title', 'maintext',]
 
-    """
-    def __init__(self, *args, **kwargs):
-        super(WriteArticleForm, self).__init__(*args, **kwargs)
-        for field in self.fields.values():
-            field.error_messages = {'required': '필수 입력 필드입니다'}
-    """
+class CommentForm(forms.ModelForm):
+    comment = forms.CharField(max_length=500, widget=forms.Textarea)
+    class Meta:
+        model = Comment
+        fields = ['comment',]

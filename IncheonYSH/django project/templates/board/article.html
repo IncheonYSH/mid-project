@@ -1,13 +1,22 @@
 {% load static %}
 {{ article_objects.update_counter }}
-<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/community_layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/article_detail.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/community_banner.css' %}">
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/slideShow.js' %}"></script>
+    <script src="{% static 'js/upbtn.js' %}"></script>
+    <script type="text/javascript">
+    </script>
     {% if messages %}
         {% for message in messages %}
            {% if message.tags %}
@@ -17,14 +26,187 @@
     {% endif %}
 </head>
 <body>
-    {% if article_objects %}
-        <div class = 'title'>{{article_objects.title}}</div>
-        <div class = 'article_number'>{{article_objects.article_number}}</div>
-        <div class = 'title_username'>{{article_objects.username}}</div>
-        <div class = 'title_time'>{{article_objects.time}}</div>
-        <div class = 'maintext'>{{article_objects.maintext}}</div>
-    {% else %}
-        <div class = 'deleted'>삭제된 게시글입니다</div>
-    {% endif %}
+    <div id="wrap">
+        <div id="header">
+            <div class="headerBox">
+                <div class="headerLimit">
+                    <div class="inner_header">
+                        <div class="logoBox"><a href="{% url 'home' %}"><img src="{% static 'image/d2.png' %}" id="logoImg"></a></div>
+                        <div class="topMenuBox">
+                            <div style="height : 0px; transition: all 0.5s ease 0s;">
+                              <ul>
+                                  <li>
+                                      <a href="#">HelloWorld</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">D2 News</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">D2 Program</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">About D2</a>
+                                  </li>
+                                  <li>
+                                      <a href="/board">Community</a>
+                                  </li>
+                              </ul>
+                            </div>
+                        </div>
+                        <div class="searchBar">
+                            <legend>검색</legend>
+                            <form action = "/">
+                                <input type="text" value placeholder="D2에서 검색" class="search_area">
+                                <button type="submit" class="btn_search"><img src="{% static 'image/search.png' %}"> </button>
+                            </form>
+                        </div>
+                        <div class="login">
+                            <ul>
+                                <li>
+                                    {% if user.is_authenticated %}
+                                    <a href="{% url 'logout' %}">Logout</a>
+                                    {% else %}
+                                    <a href="{% url 'login' %}">Login</a>
+                                    {% endif %}
+                                </li>
+                            </ul>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div id="slideBox">
+            <div class = "banner">
+                <span class = "banner_title">Community</span>
+                <span class = "banner_split">|</span>
+                <span class = "banner_meta">정보 공유 및 소통을 위한 커뮤니티입니다.</span>
+            </div>
+        </div>
+        <div id="mainBox">
+            <div id = "body_main">
+                {% if article_objects %}
+                    <div id="container_article">
+                        <!-- single_article_metadata -->
+                        <div class = "contents">
+                            <div class = "content_post">
+                                <div class = "content_post_inner">
+                                    <div class = "title">
+                                        {{ article_objects.title }}
+                                    </div>
+                                    <div class="doc_info">
+                                        <span class = "icon">
+                                            <i class="fas fa-user-edit"></i>
+                                        </span>
+                                        <span class = "article_writer">{{ article_objects.username }}</span>
+                                        <span class = "doc_info_split">|</span>
+                                        <span class = "icon">
+                                            <i class = "far fa-clock fa-xs"></i>
+                                        </span>
+                                        <span class = "upload_date">{{ article_objects.time|date:"Y.m.d" }}</span>
+                                        <span class = "doc_info_split">|</span>
+                                        <span class = "icon">
+                                            <i class = "far fa-eye xs"></i>
+                                        </span>
+                                        <span class = "view_count"></span>{{ article_objects.viewcount }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                <div class = "main_text">
+                    {{ article_objects.maintext }}
+                </div>
+                <div class = "comment_box">
+                    {% if comment_objects %}
+                        {% for comment in comment_objects %}
+                            <div class = "comment_container">
+                                <div class = "comment">
+                                    {{ comment.comment }}
+                                </div>
+                                <span class = "delete_comment" onclick = "location.href='{% url 'board:delete_comment' comment.comment_number %}'">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class = "doc_info">
+                                    <span class = "icon">
+                                        <i class="fas fa-user-edit"></i>
+                                    </span>
+                                    <span class = "comment_writer">{{ comment.username }}</span>
+                                    <span class = "doc_info_split">|</span>
+                                    <span class = "icon">
+                                        <i class = "far fa-clock fa-xs"></i>
+                                    </span>
+                                    <span class = "upload_date">{{ comment.time|date:"Y.m.d" }}</span>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                    {% endif %}
+                    <div class = "form_container">
+                        <form method="post" action="{% url 'board:write_comment' article_objects.article_number %}">
+                            {%csrf_token%}
+                            {{comment_form.comment}}
+                            <input class = "submit_comment" type = "submit" value = "등록">
+                        </form>
+                    </div>
+                </div>
+                <div class = "article_buttons">
+                    <span class="board_list" onclick = "location.href={% url 'board:index' %}">전체글</span>
+                    {% if request.user == article_objects.username %}
+                        <span class="board_delete" onclick = "location.href='{% url 'board:delete' article_objects.article_number %}'">
+                            삭제
+                        </span>
+                        <span class="board_modify" onclick = "location.href='{% url 'board:modify' article_objects.article_number %}'">
+                            수정
+                        </span>
+                    {% endif %}
+                </div>
+
+                {% else %}
+                    <div class = 'deleted'>삭제된 게시글입니다</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer">
+                <div id="big_footer" class="big_footer ">
+                    <div class="footer_up">
+                        <ul class="other_site">
+                            <li><a href="https://developers.naver.com" target="_blank"><img src="{% static 'image/naverdev.png' %}"></a></li>
+                            <li><a href="https://techcon.naver.com" target="_blank"><img src="{% static 'image/ntc.png' %}"></a></li>
+                            <li><a href="https://deview.kr" target="_blank"><img src="{% static 'image/DEVIEW.png' %}"></a></li>
+                            <li><a href="https://naver.github.io" target="_blank"><img src="{% static 'image/OpenSource.png' %}"></a></li>
+                            <li><a href="https://www.d2startup.com" target="_blank"><img src="{% static 'image/d2start.png' %}"></a></li>
+                        </ul>
+                        <div class="sns_share">
+                            <ul>
+                                <li class="email">
+                                    <a href="#"><img src="{% static 'image/email.png' %}"></a>
+                                </li>
+                                <li class="facebook">
+                                    <a href="#"><img src="{% static 'image/facebook.png' %}"></a>
+                                </li>
+                                <li class="rss">
+                                    <a href="#"><img src="{% static 'image/rss.png' %}"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_down">
+                        <div class="copyright">
+                            <p>
+                                <span>Copyright</span>
+                                ©
+                                <a href="https://www.navercorp.com/" target="_blank">NAVER Corp.</a>
+                                <span>All Rights Reserved.</span>
+                            </p>
+                            <a href="#" class="btn_go_top" id="btn_go_top" style="bottom : 20px; right:0px;" ><img src="{% static 'image/btn_up.png' %}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
