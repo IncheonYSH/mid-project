@@ -10,6 +10,10 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.paginator import Paginator
+from django.utils.html import strip_tags
+import markdown
+from markdownify import markdownify
+
 
 # article list
 def index(request):
@@ -32,6 +36,12 @@ def article(request, article_num):
     except:
         comment_objects = None
 
+    article_objects.maintext = markdown.markdown(article_objects.maintext,
+                                                 extensions=[
+                                                     'markdown.extensions.extra',
+                                                     'markdown.extensions.codehilite',
+                                                     'markdown.extensions.toc',
+                                                 ])
     comment_form = CommentForm()
     context = {
         'article_objects': article_objects,
@@ -81,6 +91,7 @@ def write(request):
 @login_required(login_url='/accounts/login')
 def modify(request, article_num):
     article = get_object_or_404(Article, pk=article_num)
+    article.maintext = markdownify(article.maintext)
     if request.user != article.username:
         messages.error(request, '권한없음')
         return redirect('board:article', article_num=article.article_number)
@@ -108,3 +119,16 @@ def delete(request, article_num):
     article.delete()
     return redirect('board:index')
 
+# Like
+@login_required(login_url='/accounts/login')
+def like_article(request, article_num):
+    article = get_object_or_404(Article, pk=article_num)
+    article.like.add(request.user)
+    return redirect('board:article', article_num=article.article_number)
+
+# Dislike
+@login_required(login_url='/accounts/login')
+def dislike_article(request, article_num):
+    article = get_object_or_404(Article, pk=article_num)
+    article.dislike.add(request.user)
+    return redirect('board:article', article_num=article.article_number)
