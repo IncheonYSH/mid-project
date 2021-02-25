@@ -93,27 +93,6 @@ class SignupForm(UserCreationForm):
             raise forms.ValidationError('비밀번호가 일치하지 않습니다')
         return pw2
 
-    """
-    def clean_year(self):
-        year = self.cleaned_data.get('year')
-        notnum_regex = re.compile(r'[^0-9]')
-        if notnum_regex.search(year) is not None:
-            raise forms.ValidationError('입력값이 올바르지 않습니다')
-        if int(year) < 0:
-            raise forms.ValidationError('입력값이 올바르지 않습니다')
-        return year
-
-    def clean_month(self):
-        month = self.cleaned_data.get('month')
-        notnum_regex = re.compile(r'[^0-9]')
-        if notnum_regex.search(month) is not None:
-            raise forms.ValidationError('입력값이 올바르지 않습니다')
-        intmonth = int(month)
-        if intmonth < 1 or intmonth > 12:
-            raise forms.ValidationError('입력값이 올바르지 않습니다')
-        return month
-        """
-
     def clean_day(self):
         day = self.cleaned_data.get('day')
         year = self.cleaned_data.get('year')
